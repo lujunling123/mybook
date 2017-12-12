@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import forgitpass from '@/page/forgitpass/forgitpass.vue'
+import publictis from '@/page/activePublic'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/HelloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -16,6 +17,11 @@ export default new Router({
       path: '/forgitpass',
       name: 'forgitpass',
       component: forgitpass
+    },
+    {
+      path: '/',
+      name: 'publictis',
+      component: publictis
     }
   ]
 })

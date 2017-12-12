@@ -5,8 +5,8 @@
       <el-col :span="10">
         <div class="grid-content">
           <div class="bg-content">
-            <div class="huluwsign"><img src=""></div>
-            <div class="signs"><img src=""/></div>
+            <div class="huluwsign"></div>
+            <div class="signs"></div>
             <div class="LoginBg">
               <div class="LoginInput">
                 <el-form  ref="ruleForm" :model="ruleForm" status-icon  :rules="rules">
@@ -94,14 +94,14 @@
     },
     methods: {
       onSubmit (ruleForm) {
-        this.login({ phone: ruleForm.username, password: ruleForm.password }).then((res)=>{
+        this.login({ phone: ruleForm.username, password: ruleForm.password }).then((res) => {
           this.$message(res.msg || res.data.message)
-          if (res.data.code === 20){
-            this.$router.push('/forgitpass')
+          if (res.data.code === 20) {
+            this.$router.push('/publictis')
           } else {
             this.$router.push('/')
           }
-        });
+        })
       },
       ...mapActions(['login'])
     }
