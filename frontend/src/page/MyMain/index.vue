@@ -3,17 +3,34 @@
     <div class="content">
       <div class="left-header">
         <div class="top-ul">
-          <div class="ulstyle">
-            <h3 class="lve" v-for="item in leftTable">
-              <router-link style="margin-left: 10px" :to="{ name:'index'}"></router-link>
-              <span>{{item.tyname}}</span>
-            </h3>
+          <div class="ulstyle"  v-for="item in leftTable">
+            <router-link  :to="{ name:item.linkpath}">
+              <div style="width: 150px;height:34px" class="lve" >
+                <span>{{item.tyname}}</span>
+              </div>
+            </router-link>
+          </div>
+          <div style="width:150px; border-bottom: 1px solid rgba(255,255,255,0.2)"></div>
+          <div class="ulstyle" v-for="item in leftTable2">
+            <router-link  :to="{ name:item.linkpath}">
+              <div style="width: 150px;height:34px" class="lve" >
+                <span>{{item.tyname}}</span>
+              </div>
+            </router-link>
+          </div>
+          <div style="width:150px; border-bottom: 1px solid rgba(255,255,255,0.2)"></div>
+          <div class="ulstyle" v-for="item in leftTable3">
+            <router-link  :to="{ name:item.linkpath}">
+              <div style="width: 150px;height:34px" class="lve" >
+                <span>{{item.tyname}}</span>
+              </div>
+            </router-link>
           </div>
         </div>
-
       </div>
       <div class="conter-header">
-
+        <router-view>
+        </router-view>
       </div>
     </div>
     <div>
@@ -116,15 +133,25 @@
       return {
         activeIndex: '',
         leftTable:[
-          {tyname:'首页', linkpath:''},
-          {tyname:'我的收藏', linkpath:''},
-          {tyname:'我的赞', linkpath:''},
-          {tyname:'热门微博', linkpath:''},
-          {tyname:'热门视频', linkpath:''},
-          {tyname:'好友圈', linkpath:''},
-          {tyname:'特别关注', linkpath:''},
-          {tyname:'V+微博', linkpath:''}
+          {tyname:'首页', linkpath:'shouye'},
+          {tyname:'我的收藏', linkpath:'wodeshoucang'},
+          {tyname:'我的赞', linkpath:'wodezan'}
+        ],
+        leftTable2:[
+          {tyname:'热门微博', linkpath:'remenweibo'},
+          {tyname:'热门视频', linkpath:'remenshipin'}
+        ],
+        leftTable3:[
+          {tyname:'好友圈', linkpath:'haoyouquan'},
+          {tyname:'特别关注', linkpath:'tebieguanzhu'},
+          {tyname:'V+微博', linkpath:'vweibo'},
+          {tyname:'我的相册', linkpath:'shouye'},
+          {tyname:'我的美图', linkpath:'wodeshoucang'},
+          {tyname:'我的段子', linkpath:'wodezan'},
+          {tyname:'热门微博', linkpath:'remenweibo'},
+          {tyname:'高校', linkpath:'remenshipin'}
         ]
+
       }
     },
     methods: {
@@ -138,7 +165,7 @@
     width: 1020px;
     margin: 0 auto;
     height:100%;
-    background-color: rgba(70,149,194,0.3);
+    background-color: rgba(70,149,194,0.2);
     .content{
       width: 100%;
       min-height: 600px;
@@ -153,16 +180,22 @@
           border-color: #82b9dc;
           border-color: rgba(255,255,255,0.2);
           .ulstyle{
-            width: 100%;
-            height: 34px;
             .lve{
+              height: 34px;
+              line-height: 34px;
               display: block;
               font-size: 14px;
               font-weight: bold;
               text-decoration: none;
               overflow: hidden;
               color: white;
+              padding-left: 12px;
+              background:transparent;
+              &:hover{
+                background-color: rgba(70,149,194,0.5);
+              }
             }
+
           }
         }
       }
@@ -175,7 +208,9 @@
         border-radius: 2px;
       }
     }
+
   }
+
 </style>
 <!--<style lang="less" scoped>-->
   <!--@import "../../common/stylus/base.less";-->

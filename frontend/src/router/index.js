@@ -5,6 +5,8 @@ import forgitpass from '@/page/forgitpass/index.vue'
 import publictis from '@/page/activePublic'
 import activeMain from '@/page/activeManage'
 import header from '@/page/header'
+import shouye from '@/page/shouye'
+import wodeshoucang from '@/page/wodeshoucang'
 
 Vue.use(Router)
 
@@ -23,7 +25,19 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: publictis
+      component: publictis,
+      children: [
+        {
+          path: 'shouye',
+          component: shouye,
+          name: 'shouye'
+        },
+        {
+          path: 'wodeshoucang',
+          component: wodeshoucang,
+          name: 'wodeshoucang'
+        }
+      ]
     },
     {
       path: '/main',
