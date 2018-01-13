@@ -7,8 +7,8 @@
     mutations: {
       login (state, payload) {
         state.userInfo.phone = payload.phone
-        state.userInfo.password= payload.password
-        state.userInfo.status= payload.status
+        state.userInfo.password = payload.password
+        state.userInfo.status = payload.status
       }
     },
     actions: {
