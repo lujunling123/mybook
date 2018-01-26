@@ -1,5 +1,6 @@
 <template>
-  <div>
-    我的收藏
-  </div>
+
 </template>
+<style lang="less" scoped>
+
+</style>

@@ -170,7 +170,7 @@
       width: 100%;
       min-height: 600px;
       margin: 0 auto;
-      margin-top: 50px;
+      margin-top: 54px;
       .left-header{
         width: 150px;
         min-height: 600px;
@@ -192,7 +192,7 @@
               padding-left: 12px;
               background:transparent;
               &:hover{
-                background-color: rgba(70,149,194,0.5);
+                background-color: #b4daf0;
               }
             }
 
@@ -201,13 +201,13 @@
       }
       .conter-header{
         float: left;
-        width: 830px;
-        min-height: 600px;
+        width: 600px;
         margin-top: 9px;
-        background-color: white;
         border-radius: 2px;
       }
     }
+
+
 
   }
 

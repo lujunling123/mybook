@@ -58,7 +58,7 @@
     box-shadow: 0 0 1px rgba(0,0,0,0.15);
     .header-conter{
       position: relative;
-      width: 1000px;
+      width: 1280px;
       height: 48px;
       margin: 0 auto;
       .logo{
